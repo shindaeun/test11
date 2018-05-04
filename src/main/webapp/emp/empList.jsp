@@ -11,6 +11,7 @@
 </head>
 <body>
 사원관리 목록
+git_test
 
 <table border="1">
 		<c:forEach var="result" items="${resultList }" varStatus="status">
