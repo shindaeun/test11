@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="EmpSpace">
+
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="searchVO" type="shindaeun.service.DefaultVO"/>
+	<typeAlias  alias="empVO" type="shindaeun.service.EmpVO"/>
+	
+	<select id="empDAO.selectEmpList" resultClass="egovMap">
+			SELECT
+				empno,
+				ename,
+				job,
+				mgr,
+				to_char(hiredate,'yyyy-mm-dd') hiredate,
+				sal,
+				comm,
+				deptno
+			FROM 
+				emp
+			
+	</select>
+
+	
+</sqlMap>
